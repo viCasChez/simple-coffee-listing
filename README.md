@@ -95,8 +95,8 @@ Para desplegar la solución:
 2. Alojar la carpeta `dist` en un servicio de hosting estático (e.g., Vercel, Netlify).
 
 ## Demo
-- [URL del Repositorio](#)
-- [URL de la Demo](#)
+- [URL del Repositorio](https://github.com/viCasChez/simple-coffee-listing)
+- [URL de la Demo](https://vicaschez.github.io/simple-coffee-listing/)
 
 ---
 
