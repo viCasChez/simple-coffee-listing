@@ -1,0 +1,19 @@
+.filters {
+  margin: 0 0 16px;
+
+  .filter-btn {
+    background-color: #1d1d1d;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    
+    &.active, &:hover {
+      background-color: #464646;
+    }
+  }
+}

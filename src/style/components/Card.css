@@ -1,0 +1,82 @@
+.coffee-card {
+  position: relative;
+  margin-bottom: 36px;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f4c542;
+    color: #1d1d1d;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+  .coffee-info {
+    font-size: .8em;
+    font-weight: bold;
+    position: relative;
+    text-align: initial;
+    display: grid;
+    grid-template-columns: 1fr auto; /* La primera columna ocupa todo el espacio, la segunda se adapta al contenido */
+    grid-template-rows: auto auto; /* Dos filas con altura automática */
+    gap: 8px;
+  
+    .title {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .price {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      color: #121212;
+      background-color: #bee2ce;
+      border-radius: 3px;
+      padding: 0 8px;
+    }
+
+    .rating {
+      grid-column: 1;
+      grid-row: 2;
+      font-size: 0.9em;
+
+      .start, .no-start {
+        font-size: 1.5em;
+        color: #f4c542;
+      }
+
+      .no-start {
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        text-stroke: 1px #fff;
+      }
+
+      .point {
+        margin: 0 2px 0 4px;
+      }
+
+      .votes {
+        color: #666;
+      }
+    }
+
+    .available {
+      grid-column: 2;
+      grid-row: 2;
+      text-align: right;
+      color: #ff8383;
+    }
+  }
+}
+
