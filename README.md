@@ -1,3 +1,5 @@
+![Background Coffee](./public/background-coffee.svg)
+
 # Simple Coffee Listing
 
 Este proyecto está diseñado para crear una página interactiva de listado de cafés utilizando React. Ayuda a los desarrolladores a practicar con bibliotecas front-end, mejorando sus habilidades en JavaScript, HTML, CSS y React mientras implementan componentes reutilizables.
