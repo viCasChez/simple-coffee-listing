@@ -8,7 +8,7 @@ const Filters = ({available, onFilterChange}) => {
       <button
         className={`filter-btn ${!available ? 'active' : ''}`}
         onClick={() => onFilterChange(available)}
-        >All Products</button>
+      >All Products</button>
       <button
         className={`filter-btn ${available ? 'active' : ''}`}
         onClick={() => onFilterChange(available)}
