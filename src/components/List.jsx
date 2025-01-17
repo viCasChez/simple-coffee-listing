@@ -8,7 +8,7 @@ const List = ({ coffeeList}) => {
   return (
     <div className="coffe-list">
       {coffeeList.map( ( coffee ) => (
-        <Card key={ coffee.id } coffee={ coffee } />
+        <Card key={ coffee.id } { ...coffee } />
       ))}
     </div>
   )

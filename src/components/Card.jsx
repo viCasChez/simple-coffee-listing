@@ -2,9 +2,7 @@ import React from "react";
 
 import '../style/components/Card.css'
 
-const Card = ({coffee}) => {
-
-  const { name, image, price, rating, votes, popular, available } = coffee;
+const Card = ({ name, image, price, rating, votes, popular, available }) => {
 
   return (
     <>
