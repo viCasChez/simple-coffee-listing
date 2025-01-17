@@ -3,7 +3,7 @@ import Card from "./Card";
 
 import '../style/components/List.css'
 
-const List = ({ coffeeList}) => {
+export const List = ({ coffeeList}) => {
 
   return (
     <div className="coffe-list">
@@ -14,5 +14,3 @@ const List = ({ coffeeList}) => {
   )
 
 }
-
-export default List;

@@ -1,9 +1,7 @@
-import Header from './components/Header';
-import Menu from './components/Filters'
-import List from './components/List'
+import { useFetchCoffees } from './hooks/useFetchCoffees';
+import { Header, Menu, List} from './components'
 
 import './style/App.css'
-import { useFetchCoffees } from './hooks/useFetchCoffees';
 
 function App() {
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import '../style/components/Filters.css'
 
-const Filters = ({allCoffees, onFilterChange}) => {
+export const Filters = ({allCoffees, onFilterChange}) => {
   return (
     <nav className="filters">
       <button
@@ -16,5 +16,3 @@ const Filters = ({allCoffees, onFilterChange}) => {
     </nav>
   )
 }
-
-export default Filters;
