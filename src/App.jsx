@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import Header from './components/Header';
 import Menu from './components/Filters'
 import List from './components/List'
 
 import './style/App.css'
 
 const urlAPI = 'https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json';
-let cofeeList = [];
+let coffeeListAll = [];
 
 function App() {
   
@@ -14,20 +15,20 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [available, setAvailable] = useState(false);
   
-  useEffect(() => {
-    const fetchCoffeeList = async () => {
-      try {
-        const response = await fetch(urlAPI);
-        const data = await response.json();
-        setLoading(false);
-        setCoffeeList(data);
-        cofeeList = data;
-      } catch (error) {
-        setCoffeeList([]);
-        setError(error);
-      }
+  const fetchCoffeeList = async () => {
+    try {
+      const response = await fetch(urlAPI);
+      const data = await response.json();
+      setLoading(false);
+      setCoffeeList(data);
+      coffeeListAll = data;
+    } catch (error) {
+      setCoffeeList([]);
+      setError(error);
     }
+  }
 
+  useEffect(() => {
     fetchCoffeeList();
   }, []);
 
@@ -37,25 +38,16 @@ function App() {
   };
 
   const getListAvailable = () => {
-    setCoffeeList(cofeeList.filter(coffee => coffee.available !== available));
+    setCoffeeList(coffeeListAll.filter(coffee => coffee.available !== available));
   }
 
   const getListAll = () => {
-    setCoffeeList(cofeeList);
+    setCoffeeList(coffeeListAll);
   }
 
   return (
     <>
-      <div className="header-image">
-        <img src='./background-coffee.svg' />
-      </div>
-      <header>
-        <h1>Our Collection</h1>
-        <p>
-          Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, 
-          expertly roasted in small batches and shipped fresh weekly.
-        </p>
-      </header>
+      <Header />
       {loading ? (
         <p>Loading...</p>
       ) : 
