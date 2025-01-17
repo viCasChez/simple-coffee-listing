@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <Header />
-      {loading ? (<p>Loading...</p>) : null}
-      {error ? (<p>Error: {error.message}</p>) : null}
+      {loading && (<p>Loading...</p>)}
+      {error && (<p>Error: {error.message}</p>)}
       {!loading && !error && (
         <>
           <Menu allCoffees={allCoffees} onFilterChange={handleFilterChange} />
